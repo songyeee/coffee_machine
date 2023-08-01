@@ -14,20 +14,22 @@ public class CoffeeMachine {
             System.out.println("-------------------------------------");
             System.out.println("1. 구매하기 | 2. 채우기 | 3. 가져가기 | 4. 나가기");
             System.out.println("번호 입력하기 >>>");
-            break;
+            int selectedNumber = Integer.parseInt(scanner.nextLine());
+            if (selectedNumber == 1) {
+                buycoffee();
+            } else if (selectedNumber == 2) {
+                fill();
+            } else if (selectedNumber == 3) {
+                take();
+            } else if (selectedNumber == 4) {
+                isRun = false;
+                System.out.println("안녕히 가세요 *^^*");
+            }
+
         }
 
-        int selectedNumber = Integer.parseInt(scanner.nextLine());
-        if (selectedNumber == 1) {
-            buycoffee();
-        } else if (selectedNumber == 2) {
-            fill();
-        } else if (selectedNumber == 3) {
-            take();
-        } else if (selectedNumber == 4) {
-            isRun = false;
-            System.out.println("안녕히 가세요 *^^*");
-        }
+
+
 
     }
 
