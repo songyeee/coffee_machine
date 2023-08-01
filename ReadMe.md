@@ -2,7 +2,7 @@
 - Java Programming 으로 Coffee Machine 만들기
 
 ## 실행방법
-- coffeeMachine.java의 메인메소드 실행
+- CoffeeMachine.java의 메인메소드 실행
 
 ## 어떤 기술이 사용되었는지
 - Java
