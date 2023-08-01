@@ -31,6 +31,8 @@ public class CoffeeMachine {
 
     }
 
+
+
     private void buycoffee() {
         System.out.println("-----------");
         System.out.println("커피 구매하기");
@@ -40,11 +42,10 @@ public class CoffeeMachine {
         System.out.println("1. 에스프레소 : 4000원");
         System.out.println("2. 라떼 : 7000원");
         System.out.println("3. 카푸치노 : 6000원");
-        int menuNo = scanner.nextInt();
+        int menuNo = Integer.parseInt(scanner.nextLine());
 
         System.out.println();
 
-        String coffeeStr = "";
 
 
         switch(menuNo) {
