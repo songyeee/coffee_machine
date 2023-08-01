@@ -16,10 +16,10 @@ public class CoffeeMachine {
             System.out.println("번호 입력하기 >>>");
 
 
-
+            String input = scanner.nextLine();
             int selectedNumber;
             try {
-                selectedNumber = Integer.parseInt(scanner.nextLine());
+                selectedNumber = Integer.parseInt(input);
             } catch (NumberFormatException e) {
                 System.out.println("잘못된 입력입니다. 숫자를 입력하세요");
                 continue;
