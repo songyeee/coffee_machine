@@ -118,8 +118,5 @@ public class CoffeeMachine {
         CoffeeMachine coffeeMachine = new CoffeeMachine();
         coffeeMachine.run();
     }
-
-
-
 }
 
