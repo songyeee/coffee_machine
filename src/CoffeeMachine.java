@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 public class CoffeeMachine {
 
-    Coffee[] coffee = new Coffee[3];
     Scanner scanner = new Scanner(System.in);
+
+    Menu menu = new Menu(50000,400,540,120,9);
 
     void run() {
         boolean isRun = true;
@@ -44,22 +45,37 @@ public class CoffeeMachine {
         System.out.println();
 
         String coffeeStr = "";
-        int money = 0;
+
 
         switch(menuNo) {
             case 1 :
-                coffeeStr = "에스프레소";
-                money = 4000;
+                menu.sellEspresso();
+                System.out.println("현재 재고 상태:");
+                System.out.println("돈: " + menu.getMoney() + "원");
+                System.out.println("물: " + menu.getWater() + "ml");
+                System.out.println("우유: " + menu.getMilk() + "ml");
+                System.out.println("원두: " + menu.getBean() + "g");
+                System.out.println("컵: " + menu.getCup() + "개");
                 break;
 
             case 2 :
-                coffeeStr = "라떼";
-                money = 7000;
+                menu.sellLatte();
+                System.out.println("현재 재고 상태:");
+                System.out.println("돈: " + menu.getMoney() + "원");
+                System.out.println("물: " + menu.getWater() + "ml");
+                System.out.println("우유: " + menu.getMilk() + "ml");
+                System.out.println("원두: " + menu.getBean() + "g");
+                System.out.println("컵: " + menu.getCup() + "개");
                 break;
 
             case 3 :
-                coffeeStr = "카푸치노";
-                money = 6000;
+                menu.sellCappuccino();
+                System.out.println("현재 재고 상태:");
+                System.out.println("돈: " + menu.getMoney() + "원");
+                System.out.println("물: " + menu.getWater() + "ml");
+                System.out.println("우유: " + menu.getMilk() + "ml");
+                System.out.println("원두: " + menu.getBean() + "g");
+                System.out.println("컵: " + menu.getCup() + "개");
                 break;
 
             default :
@@ -67,15 +83,31 @@ public class CoffeeMachine {
 
         }
 
-        System.out.println("커피가 제조되었습니다. 맛있게 드세요!");
-        System.out.println("현재 재료 및 금액 상태");
+
 
 
     }
 
     private void fill() {
+        System.out.println("-----------");
+        System.out.println("재료 채우기");
+        System.out.println("------------");
+        System.out.println("채울 수량을 입력해주세요.");
+
+        menu.fill();
+
+        System.out.println("남은 재료와 돈 상태");
+        System.out.println("돈: " + menu.getMoney() + "원");
+        System.out.println("물: " + menu.getWater() + "ml");
+        System.out.println("우유: " + menu.getMilk() + "ml");
+        System.out.println("원두: " + menu.getBean() + "g");
+        System.out.println("컵: " + menu.getCup() + "개");
+
+
     }
     private void take() {
+        menu.take();
+        System.out.println("현재 재고는" + menu.getMoney() + "원 입니다.");
     }
 
 
